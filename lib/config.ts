@@ -1,5 +1,5 @@
-export const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "(800) 555-0199";
-export const PHONE_TEL   = process.env.NEXT_PUBLIC_PHONE_TEL    ?? "8005550199";
+export const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "(866) 992-0904";
+export const PHONE_TEL   = process.env.NEXT_PUBLIC_PHONE_TEL    ?? "8669920904";
 export const BRAND_NAME  = process.env.NEXT_PUBLIC_BRAND_NAME   ?? "Pure Plumb Services";
 export const SITE_URL    = process.env.NEXT_PUBLIC_SITE_URL     ?? "https://pureplumbservices.com";
 
