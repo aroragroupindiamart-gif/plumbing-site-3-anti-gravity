@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { getStates } from "@/lib/data";
+import { getStates, getAllServices } from "@/lib/data";
 import { BRAND_NAME, PHONE_NUMBER, PHONE_TEL, NICHE, NICHE_PLURAL } from "@/lib/config";
 import Footer from "@/components/Footer";
 
 export const revalidate = 3600;
 
 export default async function HomePage() {
-  const states = await getStates();
+  const [states, services] = await Promise.all([getStates(), getAllServices()]);
   const totalPages     = states.reduce((sum, s) => sum + s.page_count, 0);
   const totalLocations = states.reduce((sum, s) => sum + s.location_count, 0);
+  const totalServices  = services.length;
 
   return (
     <>
@@ -48,9 +49,10 @@ export default async function HomePage() {
               { value: "50",                               label: "States Covered" },
               { value: totalLocations.toLocaleString(),    label: "Cities Served" },
               { value: totalPages.toLocaleString(),        label: "Service Pages" },
+              { value: totalServices.toString(),           label: `${NICHE} Services` },
             ].map((stat) => (
               <div key={stat.label} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "2rem", fontWeight: 800, color: "#f97316" }}>{stat.value}</div>
+                <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "#f97316" }}>{stat.value}</div>
                 <div style={{ fontSize: "0.85rem", color: "#94a3b8", marginTop: 4 }}>{stat.label}</div>
               </div>
             ))}
