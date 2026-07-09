@@ -15,11 +15,11 @@ export const NICHE_SINGULAR = process.env.NEXT_PUBLIC_NICHE_SINGULAR ?? "Plumber
 export const SCHEMA_TYPE    = process.env.NEXT_PUBLIC_SCHEMA_TYPE    ?? "PlumbingService";
 
 // Google Analytics measurement ID — e.g. G-XXXXXXXXXX (leave blank to disable)
-export const GA_ID      = process.env.NEXT_PUBLIC_GA_ID      ?? "";
+export const GA_ID      = process.env.NEXT_PUBLIC_GA_ID      ?? "G-ZWK2CCJG3V";
 // Google AdSense publisher ID — e.g. ca-pub-1234567890123456 (leave blank to disable)
 export const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID ?? "";
 // Google Search Console HTML tag verification token (content="" value only)
-export const GSC_TOKEN  = process.env.NEXT_PUBLIC_GSC_TOKEN  ?? "";
+export const GSC_TOKEN  = process.env.NEXT_PUBLIC_GSC_TOKEN  ?? "4PdgbVj5Xamyc7KhYHA1HEehXTTe0IWok2a6BWKMiGE";
 
 // Content variation salt — used to offset spintax selection across different sites
 export const CONTENT_SALT = parseInt(process.env.NEXT_PUBLIC_CONTENT_SALT ?? "0", 10);
