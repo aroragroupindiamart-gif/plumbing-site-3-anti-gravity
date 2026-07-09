@@ -36,7 +36,7 @@ export default async function Footer({
             <div style={{ display: "flex", flexDirection: "column", gap: 8, fontSize: "0.85rem" }}>
               {footerServices.map((svc) =>
                 hasContext ? (
-                  <Link key={svc.slug} href={`/${stateCode!.toLowerCase()}/${placeSlug}/${svc.service_slug}`} style={{ color: "#94a3b8", textDecoration: "none" }}>
+                  <Link key={svc.service_slug} href={`/${stateCode!.toLowerCase()}/${placeSlug}/${svc.service_slug}`} style={{ color: "#94a3b8", textDecoration: "none" }}>
                     {svc.service_name}
                   </Link>
                 ) : (
